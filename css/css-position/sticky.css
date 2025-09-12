@@ -1,0 +1,15 @@
+.header {
+  height: 200px;
+  background-color: lightblue;
+}
+.sticky {
+  height: 100px;
+  width: 100px;
+  background-color: lightgreen;
+  position: sticky;
+  top: 100px;
+}
+.content {
+  height: 2000px;
+  background-color: lightgray;
+}
