@@ -1,0 +1,45 @@
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.blue {
+  color: blue;
+}
+
+.font-100 {
+  font-size: 100px;
+}
+
+.font-50 {
+  font-size: 50px;
+}
+
+#bold {
+  font-weight: bold;
+}
+
+[href] {
+  font-size: 30px;
+  text-decoration: none;
+}
+
+[href="https://www.naver.com"]
+{
+  color: green;
+}
+
+div > p {
+  color: aqua;
+}
+
+#parents > .child {
+  font-size: 30px;
+}
+
+body p {
+  font-weight: bold;
+}

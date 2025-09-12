@@ -1,0 +1,37 @@
+.padding-box {
+  padding-left: 0.75rem;
+  padding-bottom: 0rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+
+  margin: 20px;
+}
+
+.border-box {
+  border-radius: 2rem;
+  border-color: red;
+  border-width: 10px;
+  border-style: dashed;
+
+  /* 너비, 종류, 색 */
+  border: 10px dashed red;
+}
+
+span {
+  margin: 20px;
+}
+
+.margin-1 {
+  height: 100px;
+  background-color: lightblue;
+  margin-bottom: 100px;
+}
+.margin-2 {
+  height: 100px;
+  background-color: lightcoral;
+  margin-top: 200px;
+}
+.margin-3 {
+  height: 100px;
+  background-color: lightgreen;
+}
