@@ -24,3 +24,9 @@ console.log(`false || false -> ${falseData || falseData}`);
 
 console.log(`!true -> ${!trueData}`);
 console.log(`!false -> ${!falseData}`);
+
+const number = 1;
+const str1 = "1";
+const bool1 = number == str1;
+
+console.log(bool1);
