@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .red {
+        color: red;
+      }
+      .green {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child" id="first">
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+    <a href="" id="naver">네이버</a>
+    <h1 id="red">red</h1>
+    <h1 id="green">green</h1>
+    <script>
+      const divEl1 = document.querySelector("div");
+      console.log(divEl1);
+
+      const divEl2 = document.querySelectorAll("div");
+      console.log(divEl2);
+
+      const divEl3 = document.querySelectorAll(".child");
+
+      const div_arr = divEl2.forEach((ele) => {
+        console.log(ele);
+      });
+      const div_arr2 = divEl3.forEach((ele) => {
+        console.log(ele);
+      });
+
+      const divEl4 = document.querySelector("#first");
+
+      console.log(divEl4);
+      setTimeout(() => {
+        divEl4["textContent"] = "3초뒤";
+      }, 3000);
+
+      const pEl1 = document.querySelectorAll("p");
+      pEl1.forEach((ele) => {
+        ele["textContent"] = "p 태그";
+      });
+      const divEl5 = document.querySelectorAll("#first > p");
+      divEl5.forEach((ele) => {
+        ele["textContent"] = "first의 자식 p 태그";
+      });
+
+      const divEl6 = document.querySelector(".parent");
+      divEl6["textContent"] = "";
+
+      const aEl1 = document.querySelector("a");
+      aEl1.setAttribute("href", "https://naver.com");
+
+      const h1El1 = document.querySelector("#red");
+      const h1El2 = document.querySelector("#green");
+
+      h1El1.className = "red";
+      h1El2.className = "green";
+    </script>
+  </body>
+</html>

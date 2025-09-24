@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>버튼</button>
+    <input type="text" />
+    <p id="message"></p>
+    <a href="https://naver.com">naver</a>
+    <script>
+      const inputTag = document.querySelector("input");
+
+      inputTag.addEventListener("input", (event) => {
+        const value = event["target"]["value"];
+        const pTag = document.querySelector("#message");
+        if (value.length < 8) {
+          pTag["textContent"] = "글자가 8글자 미만입니다";
+        } else {
+          pTag["textContent"] = "";
+        }
+      });
+
+      const buttonTag = document.querySelector("button");
+
+      buttonTag.addEventListener("click", () => {
+        alert(buttonTag["textContent"]);
+      });
+
+      buttonTag.addEventListener("click", (event) => {
+        console.log(event.type);
+        console.log(event.target);
+      });
+
+      const link = document.querySelector("a");
+
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+      });
+    </script>
+  </body>
+</html>
