@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div id="parent">
+      <p></p>
+    </div>
+    <script>
+      const DOMAIN_NAME = "https://dummyjson.com";
+
+      const parentTag = document.querySelector("#parent");
+
+      // 상품 목록을 요청할 비동기 함수
+
+      const getproduct = async () => {
+        const config = { url: `${DOMAIN_NAME}/products`, method: "get" };
+        const res = await axios(config);
+        const data = res["data"];
+
+        data["products"].forEach((ele) => {
+          const pTag = document.createElement("p");
+          pTag["textContent"] = ele["title"];
+
+          parentTag.append(pTag);
+        });
+      };
+
+      getproduct();
+
+      async function testConnect() {
+        const config = { url: `${DOMAIN_NAME}/test`, method: "get" };
+        const res = await axios(config);
+
+        console.log(res["data"]);
+      }
+
+      // testConnect();
+    </script>
+  </body>
+</html>
