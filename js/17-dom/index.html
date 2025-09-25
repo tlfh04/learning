@@ -7,6 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
+    <button>상품 목록 이름</button>
     <div id="parent">
       <p></p>
     </div>
@@ -14,7 +15,7 @@
       const DOMAIN_NAME = "https://dummyjson.com";
 
       const parentTag = document.querySelector("#parent");
-
+      const buttonTag = document.querySelector("button");
       // 상품 목록을 요청할 비동기 함수
 
       const getproduct = async () => {
@@ -30,7 +31,10 @@
         });
       };
 
-      getproduct();
+      buttonTag.addEventListener("click", () => {
+        getproduct();
+        alert("상품 목록 이름을 출력했습니다");
+      });
 
       async function testConnect() {
         const config = { url: `${DOMAIN_NAME}/test`, method: "get" };
