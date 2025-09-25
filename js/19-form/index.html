@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <form id="form">
+      <input type="password" name="password" />
+      <input type="password" name="password-confirm" id="password-confirm" />
+      <input type="submit" value="" />
+    </form>
+    <script>
+      const formTag = document.querySelector("#form");
+      formTag.addEventListener("submit", (event) => {
+        // 유효성 검사에서 벗어나면 폼 제출을 막을 수 있다
+        event.preventDefault();
+        if (
+          formTag["elements"]["password"]["value"] ===
+          formTag["elements"]["password-confirm"]["value"]
+        ) {
+          console.log("같습니다");
+        } else {
+          console.log("다릅니다"); 
+        }
+      });
+    </script>
+  </body>
+</html>
