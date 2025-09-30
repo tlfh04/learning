@@ -1,10 +1,11 @@
 import React from "react";
 import Parent from "./components/Component/Props/Parent";
-import CardContainer from "./components/Component/PropsFunction/CardContainer";
+import Container from "./components/Component/Condition/Container";
+Container;
 function App() {
   return (
     <div>
-      <CardContainer />
+      <Container></Container>
     </div>
   );
 }
