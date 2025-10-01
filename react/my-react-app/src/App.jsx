@@ -1,10 +1,9 @@
-import React from "react";
-import Container from "./components/Component/State/Container";
-import StateBasic from "./components/Component/State/StateBasic";
+import Container from "./components/StateAvanced/Container";
+
 function App() {
   return (
     <div>
-      <StateBasic></StateBasic>
+      <Container></Container>
     </div>
   );
 }
