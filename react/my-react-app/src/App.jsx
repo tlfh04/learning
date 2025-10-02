@@ -3,7 +3,7 @@ import MovieDetail from "./components/Component/TMDB/MovieDetail";
 function App() {
   return (
     <div>
-      <MovieDetail></MovieDetail>
+      <MovieList></MovieList>
     </div>
   );
 }
