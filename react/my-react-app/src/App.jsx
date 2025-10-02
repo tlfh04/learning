@@ -1,9 +1,9 @@
-import Container from "./components/UseEffect/Container";
-
+import MovieList from "./components/Component/TMDB/MovieList";
+import MovieDetail from "./components/Component/TMDB/MovieDetail";
 function App() {
   return (
     <div>
-      <Container></Container>
+      <MovieDetail></MovieDetail>
     </div>
   );
 }
