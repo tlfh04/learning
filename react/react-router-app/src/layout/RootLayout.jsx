@@ -9,6 +9,7 @@ export default function RootLayout() {
         <Link to="/about">소개페이지</Link>
         <Link to="/profile">사용자 정보 페이지</Link>
         <Link to="/auth">인증 페이지</Link>
+        <Link to="/posts">포스트 페이지</Link>
       </div>
       <Outlet />
     </div>
