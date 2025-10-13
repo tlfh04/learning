@@ -1,0 +1,47 @@
+import React from "react";
+import { NavLink, Outlet } from "react-router-dom";
+export default function AuthLayout() {
+  // 기본 스타일
+  const baseClass = "text-blue-900 font-bold p-2";
+  // 활성화 스타일
+  const activeClass = "border-2 border-red-900";
+  return (
+    <div>
+      <div className="flex gap-2">
+        <NavLink
+          className={({ isActive }) =>
+            `${baseClass} ${isActive ? activeClass : ""}`
+          }
+          to="/auth"
+        >
+          인증 홈페이지
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            `${baseClass} ${isActive ? activeClass : ""}`
+          }
+          to="/auth/login"
+        >
+          로그인 페이지
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            `${baseClass} ${isActive ? activeClass : ""}`
+          }
+          to="/auth/signup"
+        >
+          회원가입 페이지
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            `${baseClass} ${isActive ? activeClass : ""}`
+          }
+          to="/"
+        >
+          홈페이지
+        </NavLink>
+      </div>
+      <Outlet></Outlet>
+    </div>
+  );
+}
