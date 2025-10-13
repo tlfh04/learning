@@ -4,7 +4,7 @@ export default function ProtectedLayout() {
   const isLogin = false;
 
   if (!isLogin) {
-    <Navigate to="/auth/login"></Navigate>;
+    return <Navigate to="/auth/login"></Navigate>;
   }
   return <Outlet></Outlet>;
 }
