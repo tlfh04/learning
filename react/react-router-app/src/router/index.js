@@ -12,6 +12,9 @@ import Profile from "../pages/RootPages/Profile";
 import Login from "../pages/AuthPages/Login";
 import Signup from "../pages/AuthPages/Signup";
 import AuthHome from "../pages/AuthPages/AuthHome";
+// 포스트 컴포넌트
+import PostList from "../pages/RootPages/PostList";
+import PostDetail from "../pages/RootPages/PostDetail";
 
 // 라우터 설정 생성
 const router = createBrowserRouter([
@@ -24,6 +27,14 @@ const router = createBrowserRouter([
       {
         Component: ProtectedLayout,
         children: [{ path: "profile", Component: Profile }],
+      },
+      {
+        path: "posts",
+        Component: PostList,
+      },
+      {
+        path: "posts/:postId",
+        Component: PostDetail,
       },
     ],
   },
