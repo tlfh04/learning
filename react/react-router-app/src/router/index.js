@@ -3,9 +3,12 @@ import { createBrowserRouter } from "react-router-dom";
 // 레이아웃 컴포넌트 불러오기
 import RootLayout from "../layout/RootLayout";
 import AuthLayout from "../layout/AuthLayout";
+import ProtectedLayout from "../layout/ProtectedLayout";
+// 페이지 컴포넌트
 import Home from "../pages/RootPages/Home";
 import About from "../pages/RootPages/About";
 import Profile from "../pages/RootPages/Profile";
+// 회원 컴포넌트
 import Login from "../pages/AuthPages/Login";
 import Signup from "../pages/AuthPages/Signup";
 import AuthHome from "../pages/AuthPages/AuthHome";
@@ -18,7 +21,10 @@ const router = createBrowserRouter([
     children: [
       { index: true, Component: Home },
       { path: "about", Component: About },
-      { path: "profile", Component: Profile },
+      {
+        Component: ProtectedLayout,
+        children: [{ path: "profile", Component: Profile }],
+      },
     ],
   },
   {
