@@ -14,37 +14,38 @@ import Signup from "../pages/AuthPages/Signup";
 import AuthHome from "../pages/AuthPages/AuthHome";
 // 포스트 컴포넌트
 import PostList from "../pages/RootPages/PostList";
-import PostDetail from "../pages/RootPages/PostDetail";
+import PostDetail from "../components/PostDetail";
+import PATHS from "../constants/paths";
 
 // 라우터 설정 생성
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: PATHS.ROOT.INDEX,
     Component: RootLayout,
     children: [
       { index: true, Component: Home },
-      { path: "about", Component: About },
+      { path: PATHS.ROOT.ABOUT, Component: About },
       {
         Component: ProtectedLayout,
-        children: [{ path: "profile", Component: Profile }],
+        children: [{ path: PATHS.ROOT.PROFILE, Component: Profile }],
       },
       {
-        path: "posts",
+        path: PATHS.ROOT.POSTS,
         Component: PostList,
       },
       {
-        path: "posts/:postId",
+        path: PATHS.ROOT.POST_DETAIL,
         Component: PostDetail,
       },
     ],
   },
   {
-    path: "/auth",
+    path: PATHS.AUTH.INDEX,
     Component: AuthLayout,
     children: [
       { index: true, Component: AuthHome },
-      { path: "login", Component: Login },
-      { path: "signup", Component: Signup },
+      { path: PATHS.AUTH.LOGIN, Component: Login },
+      { path: PATHS.AUTH.SIGNUP, Component: Signup },
     ],
   },
 ]);

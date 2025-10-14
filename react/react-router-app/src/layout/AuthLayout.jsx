@@ -1,5 +1,7 @@
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
+import PATHS from "../constants/paths";
+
 export default function AuthLayout() {
   // 기본 스타일
   const baseClass = "text-blue-900 font-bold p-2";
@@ -12,7 +14,7 @@ export default function AuthLayout() {
           className={({ isActive }) =>
             `${baseClass} ${isActive ? activeClass : ""}`
           }
-          to="/auth"
+          to={PATHS.AUTH.INDEX}
           end
         >
           인증 홈페이지
@@ -21,7 +23,7 @@ export default function AuthLayout() {
           className={({ isActive }) =>
             `${baseClass} ${isActive ? activeClass : ""}`
           }
-          to="/auth/login"
+          to={PATHS.AUTH.LOGIN}
         >
           로그인 페이지
         </NavLink>
@@ -29,7 +31,7 @@ export default function AuthLayout() {
           className={({ isActive }) =>
             `${baseClass} ${isActive ? activeClass : ""}`
           }
-          to="/auth/signup"
+          to={PATHS.AUTH.SIGNUP}
         >
           회원가입 페이지
         </NavLink>
@@ -37,7 +39,7 @@ export default function AuthLayout() {
           className={({ isActive }) =>
             `${baseClass} ${isActive ? activeClass : ""}`
           }
-          to="/"
+          to={PATHS.ROOT.INDEX}
         >
           홈페이지
         </NavLink>
