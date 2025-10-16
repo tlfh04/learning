@@ -12,8 +12,6 @@ export default function Counter() {
     <div>
       전역 상태 Count : {count}
       <CounterIncrement />
-      <CounterIncrementByAmount />
-      <CounterReset />
     </div>
   );
 }
